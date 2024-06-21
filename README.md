@@ -5,6 +5,6 @@ A simple but helpful collection of tools and utilities for Discord!
 Use any of the credentials below!  
 USERNAME‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ PASSWORD  
 Default Account‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ Password  
-Elixirs Toolbox‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ Discord  
+Elixirs Toolbox‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ Discord  
 Mirai‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ Kingdom  
 Test Account‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ Testing  
