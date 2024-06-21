@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elixir Toolbox | Malware Builder</title>
+    <meta name="description" content="A simple collection of useful tools and utilities for Discord!">
+    <meta name="keywords" content="Elixir, Zen, Tools, Toolbox, Social, Media, Discord">
+    <meta property="og:title" content="Login Page">
+    <meta property="og:description" content="A simple collection of useful tools and utilities for Discord!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://sinfulzen.github.io/ElixirToolbox/main/builder/index.html">
+    <meta property="og:image" content="http://sinfulzen.github.io/ElixirToolbox/assets/images/branding/logo.png">
+    <link rel="icon" href="http://sinfulzen.github.io/ElixirToolbox/assets/images/branding/logo.ico" type="image/x-icon">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #1c1c1c;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            position: relative;
+            width: 80%;
+            max-width: 600px;
+            background: rgba(51, 51, 51, 0.9);
+            border: 2px solid #b19cd9;
+            border-radius: 20px;
+            padding: 30px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+        .blob {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(128, 0, 128, 0.5);
+            border-radius: 50%;
+            filter: blur(50px);
+            animation: float 10s infinite;
+            z-index: 0;
+        }
+        @keyframes float {
+            0% { transform: translate(0, 0); }
+            50% { transform: translate(100px, 100px); }
+            100% { transform: translate(0, 0); }
+        }
+        .hyperlink {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #b19cd9;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            position: relative;
+            padding: 8px 20px;
+        }
+        .hyperlink:hover {
+            color: #986fbb;
+        }
+        .hyperlink::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border-radius: 20px;
+            border: 2px solid transparent;
+            transition: border-color 0.3s ease;
+            z-index: -1;
+        }
+        .hyperlink:hover::before {
+            border-color: #b19cd9;
+        }
+        .counter-bar {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: rgba(51, 51, 51, 0.9);
+            border-top: 2px solid #b19cd9;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            z-index: 1;
+        }
+        .counter-bar p {
+            color: #fff;
+            font-size: 12px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="blob"></div>
+        <div class="blob" style="animation-delay: 2s; left: 50%;"></div>
+        <div class="blob" style="animation-delay: 4s; top: 50%;"></div>
+
+<h1 style="color: white">Coming soon...</h1>
+    </div>
+
+    <div class="counter-bar">
+        <p id="datetime"></p>
+        <p id="counter">0</p>
+    </div>
+
+    <script>
+
+        let count = 0;
+        setInterval(() => {
+            count++;
+            document.getElementById('counter').textContent = count;
+        }, 1000);
+
+        function updateTime() {
+            const now = new Date();
+            const dateStr = now.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+            const timeStr = now.toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true });
+            document.getElementById('datetime').textContent = `${dateStr} - ${timeStr}`;
+        }
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>
