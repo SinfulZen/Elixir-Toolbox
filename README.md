@@ -17,3 +17,6 @@ Test Account: Testing
   - Message Sender  
   - Embed Builder  
   + More tools coming soon!
+
+### Info  
+Until some code is implemented for detecting devices and layout adaption, use the website in Desktop mode on mobile!
