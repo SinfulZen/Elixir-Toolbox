@@ -1,10 +1,19 @@
-# Elixir-Toolbox
-A simple but helpful collection of tools and utilities for Discord!
+# Elixir-Toolbox  
+A simple but helpful collection of tools and utilities for Discord!  
 
-### How can I log into the toolbox?  
-Use any of the credentials below!  
-USERNAME‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ PASSWORD  
-Default Account‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ Password  
-Elixirs Toolbox‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ Discord  
-Mirai‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ Kingdom  
-Test Account‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎Testing  
+### Credentials  
+Default Account: Password  
+Elixirs Toolbox: Discord  
+Mirai: Kingdom  
+Test Account: Testing  
+
+### What content does the toolbox have?  
+- Malware Builder  
+  - Logger  
+  - RAT  
+- SelfBot  
+- Webhook Tools  
+  - Webhook Spammer  
+  - Message Sender  
+  - Embed Builder  
+  + More tools coming soon!
