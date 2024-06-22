@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elixir Toolbox | Home</title>
+    <title>Elixir Toolbox | SelfBot</title>
     <meta name="description" content="A simple collection of useful tools and utilities for Discord!">
     <meta name="keywords" content="Elixir, Zen, Tools, Toolbox, Social, Media, Discord">
     <meta property="og:title" content="Login Page">
     <meta property="og:description" content="A simple collection of useful tools and utilities for Discord!">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://sinfulzen.github.io/Elixir-Toolbox/main/home/index.html">
+    <meta property="og:url" content="http://sinfulzen.github.io/Elixir-Toolbox/main/selfbot/index.html">
     <meta property="og:image" content="http://sinfulzen.github.io/Elixir-Toolbox/assets/images/branding/logo.png">
     <link rel="icon" href="http://sinfulzen.github.io/Elixir-Toolbox/assets/images/branding/logo.ico" type="image/x-icon">
 
@@ -63,50 +63,24 @@
             transition: color 0.3s ease;
             position: relative;
             padding: 8px 20px;
-            cursor: pointer;
-            border: none;
-            background: none;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
         .hyperlink:hover {
             color: #986fbb;
         }
-        .dropdown-content {
-            display: none;
+        .hyperlink::before {
+            content: '';
             position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: rgba(51, 51, 51, 0.9);
-            border: 2px solid #b19cd9;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
             border-radius: 20px;
-            min-width: 200px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-            margin-top: 10px;
-            flex-direction: column;
+            border: 2px solid transparent;
+            transition: border-color 0.3s ease;
+            z-index: -1;
         }
-        .hyperlink:hover .dropdown-content {
-            display: flex;
-        }
-        .dropdown-content a {
-            color: #b19cd9;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            border-radius: 20px;
-            transition: background-color 0.3s ease;
-        }
-        .dropdown-content a:hover {
-            background-color: #575757;
-        }
-        .dropdown-content a img {
-            margin-right: 10px;
-            width: 24px;
-            height: 24px;
+        .hyperlink:hover::before {
+            border-color: #b19cd9;
         }
         .counter-bar {
             position: fixed;
@@ -133,47 +107,7 @@
         <div class="blob" style="animation-delay: 2s; left: 50%;"></div>
         <div class="blob" style="animation-delay: 4s; top: 50%;"></div>
 
-        <div class="hyperlink">
-            Malware Builder
-            <div class="dropdown-content">
-                <a href="http://sinfulzen.github.io/Elixir-Toolbox/main/builder/logger/index.html">
-                    <img src="http://sinfulzen.github.io/Elixir-Toolbox/assets/images/icons/logger.png" alt="Tool 1 Icon">Logger
-                </a>
-                <a href="http://sinfulzen.github.io/Elixir-Toolbox/main/builder/rat/index.html">
-                    <img src="http://sinfulzen.github.io/Elixir-Toolbox/assets/images/icons/rat.png" alt="Tool 2 Icon">RAT
-                </a>
-            </div>
-        </div>
-
-        <div class="hyperlink">
-            Self Bot
-            <div class="dropdown-content">
-                <a href="http://sinfulzen.github.io/Elixir-Toolbox/main/selfbot/simple/index.html">
-                    <img src="http://sinfulzen.github.io/Elixir-Toolbox/assets/images/icons/simple.png" alt="Tool 1 Icon">Simple
-                </a>
-                <a href="http://sinfulzen.github.io/Elixir-Toolbox/main/selfbot/advanced/index.html">
-                    <img src="http://sinfulzen.github.io/Elixir-Toolbox/assets/images/icons/advanced.png" alt="Tool 2 Icon">Advanced
-                </a>
-            </div>
-        </div>
-
-        <div class="hyperlink">
-            Webhook Tools
-            <div class="dropdown-content">
-                <a href="http://sinfulzen.github.io/Elixir-Toolbox/main/webhook/checker/index.html">
-                    <img src="http://sinfulzen.github.io/Elixir-Toolbox/assets/images/icons/checker.png" alt="Tool 1 Icon">Checker
-                </a>
-                <a href="http://sinfulzen.github.io/Elixir-Toolbox/main/webhook/messager/index.html">
-                    <img src="http://sinfulzen.github.io/Elixir-Toolbox/assets/images/icons/messager.png" alt="Tool 2 Icon">Message Sender
-                </a>
-                <a href="http://sinfulzen.github.io/Elixir-Toolbox/main/webhook/spammer/index.html">
-                    <img src="http://sinfulzen.github.io/Elixir-Toolbox/assets/images/icons/spammer.png" alt="Tool 3 Icon">Spammer
-                </a>
-                <a href="http://sinfulzen.github.io/Elixir-Toolbox/main/webhook/embed/index.html">
-                    <img src="http://sinfulzen.github.io/Elixir-Toolbox/assets/images/icons/embed.png" alt="Tool 3 Icon">Embed Builder
-                </a>
-            </div>
-        </div>
+<h3 style="color: white">Coming soon...</h3>
     </div>
 
     <div class="counter-bar">
@@ -182,6 +116,7 @@
     </div>
 
     <script>
+
         let count = 0;
         setInterval(() => {
             count++;
