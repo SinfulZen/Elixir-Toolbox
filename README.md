@@ -16,7 +16,7 @@ Test Account: Testing
   - Webhook Spammer  
   - Message Sender  
   - Embed Builder  
-  + More tools coming soon!
++ More tools coming soon!
 
 ### Info  
 Until some code is implemented for detecting devices and layout adaption, use the website in Desktop mode on mobile!
