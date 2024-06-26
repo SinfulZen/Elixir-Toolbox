@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elixir Toolbox • Download</title>
+    <meta name="description" content="A simple collection of useful tools and utilities for Discord!">
+    <meta name="keywords" content="Elixir, Zen, Tools, Toolbox, Social, Media, Discord">
+    <meta property="og:title" content="Login Page">
+    <meta property="og:description" content="A simple collection of useful tools and utilities for Discord!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://sinfulzen.github.io/Elixir-Toolbox/index.html">
+    <meta property="og:image" content="http://sinfulzen.github.io/Elixir-Toolbox/assets/images/branding/logo.png">
+    <link rel="icon" href="assets/images/branding/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://sinfulzen.github.io/Elixir-Toolbox/assets/css/layout.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .blob {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 800px;
+            height: 800px;
+            background: rgba(128, 0, 128, 0.2);
+            border-radius: 50%;
+            filter: blur(150px);
+            transform: translate(-50%, -50%);
+            animation: blob 15s infinite;
+            z-index: -1;
+        }
+        @keyframes blob {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.5);
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+        .download-container {
+            background-color: #444;
+            border-radius: 20px;
+            border: 2px solid #bb86fc;
+            padding: 50px;
+            text-align: center;
+        }
+        .download-link {
+            display: block;
+            margin: 10px 0;
+            padding: 15px 30px;
+            background-color: #bb86fc;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+        .download-link:hover {
+            background-color: #9d6bf1;
+        }
+    </style>
+</head>
+<body>
+    <div class="blob"></div>
+    <div class="download-container">
+        <a href="https://https://github.com/SinfulZen/Elixir-Toolbox" class="download-link">Source (SRC)</a>
+        <a href="https://github.com/SinfulZen/Elixir-Toolbox/releases/download/V1.0.0/Elixir.Toolbox.exe" class="download-link">Windows (EXE)</a>
+        <a href="https://github.com/SinfulZen/Elixir-Toolbox/releases/download/V1.0.0/Elixir.Toolbox.apk" class="download-link">Android (APK)</a>
+        <a href="https://github.com/SinfulZen/Elixir-Toolbox/releases/download/V1.0.0/Elixir.Toolbox.aab" class="download-link">Android (AAB)</a>
+    </div>
+
+    <script src="http://sinfulzen.github.io/Elixir-Toolbox/assets/js/layout.js"></script>
+
+</body>
+</html>
