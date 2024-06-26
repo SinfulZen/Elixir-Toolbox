@@ -15,7 +15,11 @@ Test Account: Testing
 - Webhook Tools  
   - Webhook Spammer  
   - Message Sender  
-  - Embed Builder  
+  - Embed Builder
+
+- Generators  
+  - Account
+  - Tokens  
 + More tools coming soon!
 
 ### Info  
