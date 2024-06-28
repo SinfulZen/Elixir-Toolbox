@@ -1,0 +1,68 @@
+VERSION                            TEST STAGE                     RESULT                     ISSUES
+---------------------------------------------------------------------------------------------------
+Android 1.0.0                      AUTO TESTED                    SUCCESS                    BUGS
+Android 1.1.0                      AUTO TESTED                    SUCCESS                    BUGS
+Android 1.5.0                      AUTO TESTED                    SUCCESS                    BUGS
+Android 1.6.0                      AUTO TESTED                    SUCCESS
+Android 2.0.0                      AUTO TESTED                    SUCCESS
+Android 2.0.1                      AUTO TESTED                    SUCCESS
+Android 2.1.0                      AUTO TESTED                    SUCCESS
+Android 2.2.0                      AUTO TESTED                    SUCCESS
+Android 2.2.1                      AUTO TESTED                    SUCCESS                    BUGS
+Android 2.2.2                      AUTO TESTED                    SUCCESS
+Android 2.2.3                      AUTO TESTED                    SUCCESS
+Android 2.3.0                      AUTO TESTED                    SUCCESS
+Android 2.3.1                      AUTO TESTED                    SUCCESS
+Android 2.3.2                      AUTO TESTED                    SUCCESS
+Android 2.3.3                      AUTO TESTED                    SUCCESS
+Android 2.3.4                      AUTO TESTED                    SUCCESS                    BUGS
+Android 2.3.5                      AUTO TESTED                    SUCCESS                    BUGS
+Android 2.3.6                      AUTO TESTED                    SUCCESS                    BUGS
+Android 2.3.7                      AUTO TESTED                    SUCCESS                    BUGS
+Android 3.0.0                      AUTO TESTED                    SUCCESS
+Android 3.1.0                      AUTO TESTED                    SUCCESS
+Android 3.2.0                      AUTO TESTED                    SUCCESS
+Android 3.2.1                      AUTO TESTED                    SUCCESS
+Android 3.2.2                      AUTO TESTED                    SUCCESS
+Android 3.2.3                      AUTO TESTED                    SUCCESS
+Android 3.2.4                      AUTO TESTED                    SUCCESS                    BUGS
+Android 3.2.5                      AUTO TESTED                    SUCCESS
+Android 3.2.6                      AUTO TESTED                    SUCCESS
+Android 4.0.0                      AUTO TESTED                    SUCCESS
+Android 4.0.1                      AUTO TESTED                    SUCCESS
+Android 4.0.2                      AUTO TESTED                    SUCCESS
+Android 4.0.3                      AUTO TESTED                    SUCCESS
+Android 4.0.4                      AUTO TESTED                    SUCCESS
+Android 4.1.0                      AUTO TESTED                    SUCCESS
+Android 4.1.1                      AUTO TESTED                    SUCCESS
+Android 4.1.2                      AUTO TESTED                    SUCCESS
+Android 4.2.0                      AUTO TESTED                    SUCCESS
+Android 4.2.1                      AUTO TESTED                    SUCCESS
+Android 4.2.2                      AUTO TESTED                    SUCCESS
+Android 4.3.0                      AUTO TESTED                    SUCCESS
+Android 4.3.1                      AUTO TESTED                    SUCCESS
+Android 4.4.0                      AUTO TESTED                    SUCCESS                    BUGS
+Android 4.4.1                      AUTO TESTED                    SUCCESS                    BUGS
+Android 4.4.2                      AUTO TESTED                    SUCCESS
+Android 4.4.3                      AUTO TESTED                    SUCCESS
+Android 4.4.4                      AUTO TESTED                    SUCCESS
+Android 5.0.0                      AUTO TESTED                    SUCCESS
+Android 5.0.1                      AUTO TESTED                    SUCCESS
+Android 5.0.2                      AUTO TESTED                    SUCCESS
+Android 5.1.0                      AUTO TESTED                    SUCCESS
+Android 5.1.1                      AUTO TESTED                    SUCCESS
+Android 6.0.0                      AUTO TESTED                    SUCCESS
+Android 6.0.1                      AUTO TESTED                    SUCCESS
+Android 7.0.0                      AUTO TESTED                    SUCCESS
+Android 7.1.0                      AUTO TESTED                    SUCCESS
+Android 7.1.1                      AUTO TESTED                    SUCCESS
+Android 7.1.2                      AUTO TESTED                    SUCCESS
+Android 8.0.0                      AUTO TESTED                    SUCCESS                    BUGS
+Android 8.1.0                      AUTO TESTED                    SUCCESS
+Android 9.0.0                      AUTO TESTED                    SUCCESS
+Android 10.0                       AUTO TESTED                    SUCCESS
+Android 11.0                       AUTO TESTED                    SUCCESS
+Android 12.0                       AUTO TESTED                    SUCCESS
+Android 12L.0                      AUTO TESTED                    SUCCESS
+Android 13.0                   MANUALLY TESTED                    SUCCESS
+Android 14.0                   MANUALLY TESTED                    SUCCESS

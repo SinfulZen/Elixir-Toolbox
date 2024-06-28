@@ -11,7 +11,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://sinfulzen.github.io/Elixir-Toolbox/index.html">
     <meta property="og:image" content="http://sinfulzen.github.io/Elixir-Toolbox/assets/images/branding/logo.png">
-    <link rel="icon" href="assets/images/branding/logo.ico" type="image/x-icon">
+    <link rel="icon" href="http://sinfulzen.github.io/Elixir-Toolbox/assets/images/branding/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="http://sinfulzen.github.io/Elixir-Toolbox/assets/css/layout.css">
 
     <style>
@@ -103,6 +103,9 @@
             cursor: pointer;
             margin-top: 20px;
         }
+        .login-box button.guest {
+            background: #b19cd9;
+        }
         .logo {
             position: absolute;
             top: -35px;
@@ -116,33 +119,6 @@
         .logo img {
             width: 100%;
             height: 100%;
-        }
-        .credentials-link {
-            color: #b19cd9;
-            cursor: pointer;
-            text-decoration: underline;
-            margin-top: 10px;
-        }
-        .popup {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 300px;
-            padding: 20px;
-            background: rgba(51, 51, 51, 0.9);
-            border: 2px solid #b19cd9;
-            border-radius: 15px;
-            text-align: center;
-            z-index: 20;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-        .popup img {
-            width: 30px;
-            height: 30px;
-            cursor: pointer;
-            margin-top: 10px;
         }
     </style>
 </head>
@@ -165,25 +141,15 @@
                 <img src="assets/images/icons/key.png" alt="Password Icon">
             </div>
             <button onclick="login()">Login</button>
-            <br>
-            <div class="credentials-link" onclick="showPopup()">Credentials</div>
-        </div>
-        <div class="popup" id="popup">
-        <p style="color:white;">Default Account: Password</p>
-        <p style="color:white;">Elixirs Toolbox: Discord</p>
-        <p style="color:white;">Mirai: Kingdom</p>
-        <p style="color:white;">Test Account: Testing</p>
-            <img src="assets/images/icons/close.png" alt="Close Icon" onclick="closePopup()">
+            <button class="guest" onclick="guestLogin()">Guest</button>
         </div>
     </div>
 
     <script src="http://sinfulzen.github.io/Elixir-Toolbox/assets/js/layout.js"></script>
     <script>
         const credentials = [
-            { username: "Default Account", password: "Password" },
-            { username: "Elixirs Toolbox", password: "Discord" },
-            { username: "Mirai", password: "Kingdom" },
-            { username: "Test Account", password: "Testing" }
+            { username: "Administrator", password: "Administrator" },
+            { username: "Test", password: "Testing" }
         ];
 
         function login() {
@@ -200,12 +166,8 @@
             }
         }
 
-        function showPopup() {
-            document.getElementById('popup').style.display = 'block';
-        }
-
-        function closePopup() {
-            document.getElementById('popup').style.display = 'none';
+        function guestLogin() {
+            window.location.href = 'main/home/index.html';
         }
     </script>
 </body>
