@@ -2,10 +2,8 @@
 A simple but helpful collection of tools and utilities for Discord!  
 
 ### Credentials  
-Default Account: Password  
-Elixirs Toolbox: Discord  
-Mirai: Kingdom  
-Test Account: Testing  
+Administrator: Administrator  
+Test: Testing  
 
 ### What content does the toolbox have?  
 - Malware Builder  
@@ -21,6 +19,3 @@ Test Account: Testing
   - Account
   - Tokens  
 + More tools coming soon!
-
-### Info  
-Until some code is implemented for detecting devices and layout adaption, use the website in Desktop mode on mobile!
