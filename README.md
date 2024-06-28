@@ -19,3 +19,9 @@ Test: Testing
   - Account
   - Tokens  
 + More tools coming soon!
+
+### Download the app!  
+[Source](https://github.com/SinfulZen/Elixir-Toolbox/archive/refs/tags/V1.0.25.zip)   
+[Windows EXE](https://github.com/SinfulZen/Elixir-Toolbox/releases/download/V1.0.25/Elixir.Toolbox.exe)  
+[Android APK](https://github.com/SinfulZen/Elixir-Toolbox/releases/download/V1.0.25/Elixir.Toolbox.apk)  
+[Android AAB](https://github.com/SinfulZen/Elixir-Toolbox/releases/download/V1.0.25/Elixir.Toolbox.aab)  
