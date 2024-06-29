@@ -13,6 +13,50 @@
     <meta property="og:image" content="http://sinfulzen.github.io/Elixir-Toolbox/assets/images/branding/logo.png">
     <link rel="icon" href="http://sinfulzen.github.io/Elixir-Toolbox/assets/images/branding/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="http://sinfulzen.github.io/Elixir-Toolbox/assets/css/layout.css">
+    
+    <html>
+<head>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        .back-button img {
+            height: 24px;
+            width: 24px;
+            margin-right: 8px;
+        }
+        .back-button span {
+            font-size: 16px;
+            color: #b19cd9;
+        }
+    </style>
+</head>
+<body>
+    <button class="back-button" onclick="goBack()">
+        <img src="https://sinfulzen.github.io/Elixir-Toolbox/assets/images/icons/back.png" alt="Back Icon">
+        <span>Back</span>
+    </button>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
 
     <style>
         body {
@@ -23,7 +67,6 @@
             justify-content: center;
             align-items: center;
             background: #1c1c1c;
-            overflow: hidden;
             font-family: Arial, sans-serif;
         }
         .container {
@@ -38,7 +81,6 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
             z-index: 1;
         }
         .blob {
@@ -55,6 +97,38 @@
             0% { transform: translate(0, 0); }
             50% { transform: translate(100px, 100px); }
             100% { transform: translate(0, 0); }
+        }
+        .input-box {
+            width: 100%;
+            max-width: 500px;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            z-index: 1;
+        }
+        .input-box input {
+            width: 80%;
+            padding: 10px 15px;
+            border: 2px solid #b19cd9;
+            border-radius: 20px;
+            outline: none;
+            font-size: 16px;
+            background: #333;
+            color: #fff;
+        }
+        .check-button {
+            margin-left: 10px;
+            background-color: #b19cd9;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .check-button:hover {
+            background-color: #986fbb;
         }
         .hyperlink {
             margin-top: 20px;
@@ -100,6 +174,10 @@
             font-size: 12px;
             margin: 0;
         }
+        .result {
+            color: white;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -108,7 +186,11 @@
         <div class="blob" style="animation-delay: 2s; left: 50%;"></div>
         <div class="blob" style="animation-delay: 4s; top: 50%;"></div>
 
-<h3 style="color: white">Coming soon...</h3>
+        <div class="input-box">
+            <input type="text" id="webhook-url" placeholder="Paste your Discord webhook URL here">
+            <button class="check-button" onclick="checkWebhook()">Check</button>
+        </div>
+        <div class="result" id="result"></div>
     </div>
 
     <div class="counter-bar">
@@ -116,9 +198,8 @@
         <p id="counter">0</p>
     </div>
 
-        <script src="http://sinfulzen.github.io/Elixir-Toolbox/assets/js/layout.js"></script>
+    <script src="http://sinfulzen.github.io/Elixir-Toolbox/assets/js/layout.js"></script>
     <script>
-
         let count = 0;
         setInterval(() => {
             count++;
@@ -133,6 +214,29 @@
         }
         updateTime();
         setInterval(updateTime, 1000);
+
+        async function checkWebhook() {
+            const webhookUrl = document.getElementById('webhook-url').value;
+            const resultDiv = document.getElementById('result');
+
+            try {
+                const response = await fetch(webhookUrl);
+                if (response.ok) {
+                    const data = await response.json();
+                    resultDiv.innerHTML = `
+                        <p>Server ID: ${data.guild_id}</p>
+                        <p>Channel ID: ${data.channel_id}</p>
+                        <p>Author: ${data.name}</p>
+                        <p>Created At: ${new Date(data.created_at).toLocaleString()}</p>
+                        <p>Valid: Yes</p>
+                    `;
+                } else {
+                    resultDiv.innerHTML = '<p>Invalid webhook URL</p>';
+                }
+            } catch (error) {
+                resultDiv.innerHTML = '<p>Error fetching webhook information</p>';
+            }
+        }
     </script>
 </body>
 </html>

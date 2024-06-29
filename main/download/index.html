@@ -13,6 +13,51 @@
     <meta property="og:image" content="http://sinfulzen.github.io/Elixir-Toolbox/assets/images/branding/logo.png">
     <link rel="icon" href="http://sinfulzen.github.io/Elixir-Toolbox/assets/images/branding/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="http://sinfulzen.github.io/Elixir-Toolbox/assets/css/layout.css">
+    
+    <html>
+<head>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        .back-button img {
+            height: 24px;
+            width: 24px;
+            margin-right: 8px;
+        }
+        .back-button span {
+            font-size: 16px;
+            color: #b19cd9;
+        }
+    </style>
+</head>
+<body>
+    <button class="back-button" onclick="goBack()">
+        <img src="https://sinfulzen.github.io/Elixir-Toolbox/assets/images/icons/back.png" alt="Back Icon">
+        <span>Back</span>
+    </button>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
+    
     <style>
         body, html {
             margin: 0;

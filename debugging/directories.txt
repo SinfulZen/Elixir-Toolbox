@@ -5,6 +5,7 @@ assets/images/branding/logo.ico
 assets/images/branding/logo.png
 assets/images/icons/account.png
 assets/images/icons/advanced.png
+assets/images/icons/back.png
 assets/images/icons/checker.png
 assets/images/icons/close.png
 assets/images/icons/embed.png

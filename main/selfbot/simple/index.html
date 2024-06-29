@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elixir Toolbox • Simnple SelfBot</title>
+    <title>Elixir Toolbox • Simple SelfBot</title>
     <meta name="description" content="A simple collection of useful tools and utilities for Discord!">
     <meta name="keywords" content="Elixir, Zen, Tools, Toolbox, Social, Media, Discord">
     <meta property="og:title" content="Login Page">
@@ -13,6 +13,50 @@
     <meta property="og:image" content="http://sinfulzen.github.io/Elixir-Toolbox/assets/images/branding/logo.png">
     <link rel="icon" href="http://sinfulzen.github.io/Elixir-Toolbox/assets/images/branding/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="http://sinfulzen.github.io/Elixir-Toolbox/assets/css/layout.css">
+    
+    <html>
+<head>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        .back-button img {
+            height: 24px;
+            width: 24px;
+            margin-right: 8px;
+        }
+        .back-button span {
+            font-size: 16px;
+            color: #b19cd9;
+        }
+    </style>
+</head>
+<body>
+    <button class="back-button" onclick="goBack()">
+        <img src="https://sinfulzen.github.io/Elixir-Toolbox/assets/images/icons/back.png" alt="Back Icon">
+        <span>Back</span>
+    </button>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
 
     <style>
         body {
@@ -100,6 +144,43 @@
             font-size: 12px;
             margin: 0;
         }
+        .input-box {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            border: 2px solid #b19cd9;
+            border-radius: 25px;
+            background: #333;
+            color: #fff;
+            font-size: 16px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .connect-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            background: #b19cd9;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .connect-button:hover {
+            background: #986fbb;
+        }
+        .commands-header {
+            margin-top: 30px;
+            color: #fff;
+            font-size: 24px;
+            text-align: center;
+        }
+        .commands-text {
+            color: #bfbfbf;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -108,7 +189,14 @@
         <div class="blob" style="animation-delay: 2s; left: 50%;"></div>
         <div class="blob" style="animation-delay: 4s; top: 50%;"></div>
 
-<h3 style="color: white">Coming soon...</h3>
+        <input type="text" class="input-box" placeholder="Enter Your token here">
+        <button class="connect-button">Connect</button>
+        <h2 class="commands-header">Commands</h2>
+        <p class="commands-text">!DM.All</p>
+        <p class="commands-text">!Message.AllServers</p>
+        <p class="commands-text">!Spam.AllServers</p>
+        <p class="commands-text">!Delete.AllMessages</p>
+        <p class="commands-text">!Change.Prefix</p>
     </div>
 
     <div class="counter-bar">
@@ -116,9 +204,8 @@
         <p id="counter">0</p>
     </div>
 
-        <script src="http://sinfulzen.github.io/Elixir-Toolbox/assets/js/layout.js"></script>
+    <script src="http://sinfulzen.github.io/Elixir-Toolbox/assets/js/layout.js"></script>
     <script>
-
         let count = 0;
         setInterval(() => {
             count++;
